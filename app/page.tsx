@@ -1,0 +1,434 @@
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Github, Linkedin, Mail, ExternalLink, Download, Code, Database, Globe, Smartphone } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+
+export default function Portfolio() {
+  const skills = {
+    frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    backend: ["Node.js", "Python", "Java", "Express.js", "Fast API"],
+    database: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+    tools: ["Git", "Docker","Kubernetes", "Vercel", "Linux", "Figma"],
+  }
+
+  const projects = [
+    {
+      title: "JobEase:AI Agent for IT Job Seekers",
+      description:
+        "Full-stack  application with user authentication, payment processing, and admin dashboard.",
+      tech: ["React.js", "TypeScript", "MongoDB", "FastAPI", "Tailwind CSS"],
+      github: "https://github.com",
+      demo: "https://drive.google.com/file/d/1OZVx5jsuRKMmLvc_YEZTHap1I7BacbAe/view?usp=sharing",
+      image: "/jobease.png?height=200&width=400&text=E-Commerce+Platform",
+    },
+    {
+      title: "Amazon Scraper",
+      description:
+        "Collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      tech: ["React", "Node.js", "Socket.io", "MongoDB", "Express.js"],
+      github: "https://github.com",
+      demo: "https://drive.google.com/file/d/1iHQWo8FxO3REfu9F0ow2WMq4qtSvrIOI/view?usp=sharing",
+      image: "/scraper.png?height=200&width=400&text=Task+Management+App",
+    },
+
+  ]
+
+  const experience = [
+
+    {
+      title: "MERN-Stack Developer",
+      company: "Freelance",
+      period: "Jul 2024 - Dec 2024",
+      description:
+        "Built custom web applications for small businesses. Specialized in modern JavaScript frameworks and cloud deployment.",
+    },
+    {
+      title: "Software Engineering Intern",
+      company: "Incubation Center Sukkur",
+      period: "Aug 2022 - Mar 2023",
+      description:
+        "Developed and maintained web applications using React and Node.js. Collaborated with senior developers on feature implementation and bug fixes.",
+    },
+    
+  ]
+
+  const achievements = [
+    {
+      title: "Winner",
+      description: "solved all hacker rank porblems in senior category in sibafest25 ",
+      icon: "🏆",
+      year: "2025",
+    },
+    {
+      title: "Runner UP",
+      description: "1st place at TechCrunch Disrupt Hackathon for AI-powered study assistant",
+      icon: "💻",
+      year: "2023",
+    },
+    {
+      title: "Open Source Contributor",
+      description: "Contributed to 15+ open source projects with 500+ GitHub stars",
+      icon: "⭐",
+      year: "2022-2024",
+    },
+    {
+      title: "Back End Development and APIs",
+      description: "FreeCodeCamp",
+      icon: "☁️",
+      year: "2025",
+    },
+   {
+      title: " Problem Solving (Intermediate)",
+      description: "HackerRank",
+      icon: "☁️",
+      year: "2025",
+    },
+    
+  ]
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-xl font-bold">Abdul Jabar</h1>
+          <div className="hidden md:flex space-x-6">
+            <Link href="#about" className="hover:text-blue-600 transition-colors">
+              About
+            </Link>
+            <Link href="#skills" className="hover:text-blue-600 transition-colors">
+              Skills
+            </Link>
+            <Link href="#projects" className="hover:text-blue-600 transition-colors">
+              Projects
+            </Link>
+            <Link href="#experience" className="hover:text-blue-600 transition-colors">
+              Experience
+            </Link>
+            <Link href="#achievements" className="hover:text-blue-600 transition-colors">
+              Achievements
+            </Link>
+            <Link href="#contact" className="hover:text-blue-600 transition-colors">
+              Contact
+            </Link>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4">
+        <div className="container mx-auto text-center">
+          <div className="mb-8">
+            <Image
+              src="/placeholder.svg?height=150&width=150&text=Profile"
+              alt="Alex Johnson"
+              width={150}
+              height={150}
+              className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
+            />
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Abdul Jabbar Rahimoon
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-6">
+              Full-Stack Web  Developer & Computer Science Graduate
+            </p>
+            <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-8">
+              Passionate about creating innovative web applications and solving complex problems with clean, efficient
+              code.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </Button>
+              <div className="flex space-x-4">
+                <Link href="https://github.com/Abdul-Logiclion" target="_blank" rel="noopener noreferrer">
+    <Button variant="outline" size="icon">
+      <Github className="w-4 h-4" />
+    </Button>
+  </Link>
+
+   <Link href="https://github.com/Abdul-Logiclion" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Linkedin className="w-4 h-4" />
+                </Button>
+                </Link>
+                 <Link href="https://github.com/Abdul-Logiclion" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Mail className="w-4 h-4" />
+                </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-16 px-4 bg-white dark:bg-slate-800">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
+                  Recent Computer Science graduate with a passion for full-stack development. I enjoy building scalable
+                  web applications and learning new technologies. My experience spans from frontend frameworks to
+                  backend APIs and database design.
+                </p>
+                <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
+                  I'm always eager to take on new challenges and contribute to innovative projects that make a positive
+                  impact. When I'm not coding, you can find me exploring new technologies, contributing to open source,
+                  or playing chess.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Problem Solver</Badge>
+                  <Badge variant="secondary">Team Player</Badge>
+                  <Badge variant="secondary">Quick Learner</Badge>
+                  <Badge variant="secondary">Open Source Contributor</Badge>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-2">
+                      <Code className="w-5 h-5 mr-2 text-blue-600" />
+                      <h3 className="font-semibold">Education</h3>
+                    </div>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                      Bachelor of Science in Computer Science
+                      <br />
+                      Sukkur IBA University • May 2025
+                      <br />
+                     
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-2">
+                      <Globe className="w-5 h-5 mr-2 text-green-600" />
+                      <h3 className="font-semibold">Location</h3>
+                    </div>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                      Karachi, Pakistan
+                      <br />
+                      Open to remote opportunities
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-16 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Globe className="w-5 h-5 mr-2 text-blue-600" />
+                  Frontend
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skills.frontend.map((skill) => (
+                    <Badge key={skill} variant="outline">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Code className="w-5 h-5 mr-2 text-green-600" />
+                  Backend
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skills.backend.map((skill) => (
+                    <Badge key={skill} variant="outline">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Database className="w-5 h-5 mr-2 text-purple-600" />
+                  Database
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skills.database.map((skill) => (
+                    <Badge key={skill} variant="outline">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Smartphone className="w-5 h-5 mr-2 text-orange-600" />
+                  Tools
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skills.tools.map((skill) => (
+                    <Badge key={skill} variant="outline">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-16 px-4 bg-white dark:bg-slate-800">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="relative h-48">
+                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                </div>
+                <CardHeader>
+                  <CardTitle>{project.title}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="flex space-x-2">
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href={project.github}>
+                        <Github className="w-4 h-4 mr-1" />
+                        Code
+                      </Link>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href={project.demo}>
+                        <ExternalLink className="w-4 h-4 mr-1" />
+                        Demo
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-16 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Experience</h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            {experience.map((exp, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <CardTitle>{exp.title}</CardTitle>
+                      <CardDescription className="text-lg font-medium text-blue-600">{exp.company}</CardDescription>
+                    </div>
+                    <Badge variant="outline">{exp.period}</Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 dark:text-slate-300">{exp.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section id="achievements" className="py-16 px-4 bg-slate-50 dark:bg-slate-900">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">Achievements & Recognition</h2>
+          <p className="text-center text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto">
+            Key milestones and recognitions that highlight my dedication to excellence and continuous learning.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {achievements.map((achievement, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="text-3xl">{achievement.icon}</div>
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="font-semibold text-lg">{achievement.title}</h3>
+                        <Badge variant="outline" className="text-xs">
+                          {achievement.year}
+                        </Badge>
+                      </div>
+                      <p className="text-slate-600 dark:text-slate-300 text-sm">{achievement.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-4 bg-white dark:bg-slate-800">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-8">Let's Work Together</h2>
+          <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+            I'm always interested in new opportunities and exciting projects. Whether you have a question or just want
+            to say hi, feel free to reach out!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Mail className="w-4 h-4 mr-2" />
+              abduljabarsc01@gmail.com
+            </Button>
+            <Button variant="outline" size="lg">
+              <Linkedin className="w-4 h-4 mr-2" />
+              LinkedIn Profile
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-4 border-t border-slate-200 dark:border-slate-700">
+        <div className="container mx-auto text-center">
+          <p className="text-slate-500 dark:text-slate-400">
+            © 2025 Abdul Jabar. Built with Next.js and Tailwind CSS.
+          </p>
+        </div>
+      </footer>
+    </div>
+  )
+}
