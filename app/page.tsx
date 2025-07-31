@@ -14,80 +14,79 @@ export default function Portfolio() {
   }
 
   const projects = [
-    {
-      title: "JobEase:AI Agent for IT Job Seekers",
-      description:
-        "Full-stack  application with user authentication, payment processing, and admin dashboard.",
-      tech: ["React.js", "TypeScript", "MongoDB", "FastAPI", "Tailwind CSS"],
-      github: "https://github.com",
-      demo: "https://drive.google.com/file/d/1OZVx5jsuRKMmLvc_YEZTHap1I7BacbAe/view?usp=sharing",
-      image: "/jobease.png?height=200&width=400&text=E-Commerce+Platform",
-    },
-    {
-      title: "Amazon Scraper",
-      description:
-        "Collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB", "Express.js"],
-      github: "https://github.com",
-      demo: "https://drive.google.com/file/d/1iHQWo8FxO3REfu9F0ow2WMq4qtSvrIOI/view?usp=sharing",
-      image: "/scraper.png?height=200&width=400&text=Task+Management+App",
-    },
+  {
+    title: "JobEase: AI Career Agent For IT Job Seekers",
+    description: "Scraped job listings from 5 platforms and utilized Gemini APIs. Developed web and mobile interfaces, backed by a MongoDB database.",
+    tech: ["Python", "React.js", "TypeScript", "Express.js", "MongoDB", "Google Gemini API"],
+    github: "https://github.com", // Replace with actual GitHub link if available
+    demo: "Link", // As per resume, which might not be a direct URL. If you have a specific URL for the demo, replace this.
+    image: "/jobease.png?height=200&width=400&text=JobEase+AI+Agent",
+  },
+  {
+    title: "AI Product Scraper: Global Market Intelligence",
+    description: "AI Assistant for Scraping Amazon Product Data using Keywords to Gather Market Intelligence. Implemented postal code processing and utilized Scrapy for contacts.",
+    tech: ["Next.js", "Supabase", "PostgreSQL", "FastAPI", "Scrapy", "Pandas", "Selenium", "BeautifulSoup", "Python"],
+    github: "https://github.com", // Replace with actual GitHub link if available
+    demo: "Link", // As per resume, which might not be a direct URL. If you have a specific URL for the demo, replace this.
+    image: "/scraper.png?height=200&width=400&text=AI+Product+Scraper",
+  },
+];
 
-  ]
+const experience = [
+  {
+    title: "MERN Stack Developer",
+    company: "Fiverr",
+    period: "Jul 24 - Dec '24",
+    description:
+      "Developed MERN web application for centralized Jira/Salesforce data and in-browser PDF reporting. Built React-based reports and Jira plugins (incl. custom fields) to enhance data integration.",
+  },
+  {
+    title: "Front end Intern",
+    company: "National Incubation Center",
+    period: "Oct 22 - Mar '23",
+    description: "Developed the user interface for the MedPro Website.",
+  },
+];
 
-  const experience = [
-
-    {
-      title: "MERN-Stack Developer",
-      company: "Freelance",
-      period: "Jul 2024 - Dec 2024",
-      description:
-        "Built custom web applications for small businesses. Specialized in modern JavaScript frameworks and cloud deployment.",
-    },
-    {
-      title: "Software Engineering Intern",
-      company: "Incubation Center Sukkur",
-      period: "Aug 2022 - Mar 2023",
-      description:
-        "Developed and maintained web applications using React and Node.js. Collaborated with senior developers on feature implementation and bug fixes.",
-    },
-    
-  ]
-
-  const achievements = [
-    {
-      title: "Winner",
-      description: "solved all hacker rank porblems in senior category in sibafest25 ",
-      icon: "🏆",
-      year: "2025",
-    },
-    {
-      title: "Runner UP",
-      description: "1st place at TechCrunch Disrupt Hackathon for AI-powered study assistant",
-      icon: "💻",
-      year: "2023",
-    },
-    {
-      title: "Open Source Contributor",
-      description: "Contributed to 15+ open source projects with 500+ GitHub stars",
-      icon: "⭐",
-      year: "2022-2024",
-    },
-    {
-      title: "Back End Development and APIs",
-      description: "FreeCodeCamp",
-      icon: "☁️",
-      year: "2025",
-    },
-   {
-      title: " Problem Solving (Intermediate)",
-      description: "HackerRank",
-      icon: "☁️",
-      year: "2025",
-    },
-    
-  ]
-
+const achievements = [
+  {
+    title: "Winner, SibaFest25 speed programming Competition",
+    description: "Speed programming competition winner at SibaFest25.",
+    icon: "🏆",
+    year: "May '25",
+  },
+  {
+    title: "Runner-Up, CS Society Programming Competition",
+    description: "Runner-Up in CS Society Programming Competition.",
+    icon: "🥈",
+    year: "Feb '25",
+  },
+  {
+    title: "Next js App Router Course, Vercel",
+    description: "Certification for Next.js App Router Course from Vercel.",
+    icon: "🎓",
+    year: "Jul '24",
+  },
+  {
+    title: "Introduction to MongoDB, MongoDB University",
+    description: "Certification in Introduction to MongoDB from MongoDB University.",
+    icon: "🎓",
+    year: "May '24",
+  },
+  {
+    title: "Back End Development and APIs, freeCodeCamp",
+    description: "Certification in Back End Development and APIs from freeCodeCamp.",
+    icon: "🎓",
+    year: "Jul '25",
+  },
+  {
+    title: "Problem Solving (Intermediate), HackerRank",
+    description: "Certification in Problem Solving (Intermediate) from HackerRank.",
+    icon: "🎓",
+    year: "Apr '25",
+  },
+];
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       {/* Navigation */}
@@ -122,10 +121,10 @@ export default function Portfolio() {
         <div className="container mx-auto text-center">
           <div className="mb-8">
             <Image
-              src="/placeholder.svg?height=150&width=150&text=Profile"
-              alt="Alex Johnson"
-              width={150}
-              height={150}
+              src="/profile12.jpg?text=Profile"
+              alt="Abdul Jabar"
+              width={250}
+              height={250}
               className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
             />
             <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -139,10 +138,17 @@ export default function Portfolio() {
               code.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
-              </Button>
+             <a
+  href="https://drive.google.com/file/d/1mFDoHW2MLbPOLKbggZtNhORDq7SaQm2h/view?usp=drive_link"
+  target="_blank" // Opens the link in a new tab
+  rel="noopener noreferrer" // Essential for security when opening in a new tab
+   className="cursor-pointer"
+>
+  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+    <Download className="w-4 h-4 mr-2" />
+    Download Resume
+  </Button>
+</a>
               <div className="flex space-x-4">
                 <Link href="https://github.com/Abdul-Logiclion" target="_blank" rel="noopener noreferrer">
     <Button variant="outline" size="icon">
@@ -150,16 +156,18 @@ export default function Portfolio() {
     </Button>
   </Link>
 
-   <Link href="https://github.com/Abdul-Logiclion" target="_blank" rel="noopener noreferrer">
+   <Link href="https://www.linkedin.com/in/abdul-jabbar-rahimoon" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="icon">
                   <Linkedin className="w-4 h-4" />
                 </Button>
                 </Link>
-                 <Link href="https://github.com/Abdul-Logiclion" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="icon">
+                 <Link href="mailto:abduljabarsc01@gmail.com"  rel="noopener noreferrer">
+                <Button  variant="outline" size="icon">
                   <Mail className="w-4 h-4" />
+               
                 </Button>
                 </Link>
+    
               </div>
             </div>
           </div>
@@ -306,7 +314,7 @@ export default function Portfolio() {
       <section id="projects" className="py-16 px-4 bg-white dark:bg-slate-800">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {projects.map((project, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative h-48">
@@ -413,10 +421,13 @@ export default function Portfolio() {
               <Mail className="w-4 h-4 mr-2" />
               abduljabarsc01@gmail.com
             </Button>
+            <Link href="https://www.linkedin.com/in/abdul-jabbar-rahimoon" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg">
               <Linkedin className="w-4 h-4 mr-2" />
               LinkedIn Profile
             </Button>
+            </Link>
+
           </div>
         </div>
       </section>
