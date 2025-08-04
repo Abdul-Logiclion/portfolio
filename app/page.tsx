@@ -139,7 +139,7 @@ const achievements = [
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
              <a
-  href="https://drive.google.com/file/d/1mFDoHW2MLbPOLKbggZtNhORDq7SaQm2h/view?usp=drive_link"
+  href="https://drive.google.com/file/d/1f5OOq9F6TO2RJezqfLT83K0o6xHrG6Zu/view?usp=sharing"
   target="_blank" // Opens the link in a new tab
   rel="noopener noreferrer" // Essential for security when opening in a new tab
    className="cursor-pointer"
