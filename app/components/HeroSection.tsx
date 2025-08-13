@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Chatbot from "./Chatbot";
 
 export default function HeroSection() {
   return (
@@ -43,6 +44,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      <Chatbot />
     </section>
   );
 }
