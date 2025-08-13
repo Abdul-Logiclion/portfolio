@@ -18,28 +18,31 @@ export default function Portfolio() {
     title: "JobEase: AI Career Agent For IT Job Seekers",
     description: "Scraped job listings from 5 platforms and utilized Gemini APIs. Developed web and mobile interfaces, backed by a MongoDB database.",
     tech: ["Python", "React.js", "TypeScript", "Express.js", "MongoDB", "Google Gemini API"],
-    github: "https://github.com", // Replace with actual GitHub link if available
-    demo: "Link", // As per resume, which might not be a direct URL. If you have a specific URL for the demo, replace this.
+    github: "https://github.com/Abdul-logiclion", // Replace with actual GitHub link if available
+    demo: "https://jobease-frontend-n3wo.vercel.app/", // As per resume, which might not be a direct URL. If you have a specific URL for the demo, replace this.
     image: "/jobease.png?height=200&width=400&text=JobEase+AI+Agent",
   },
   {
     title: "AI Product Scraper: Global Market Intelligence",
     description: "AI Assistant for Scraping Amazon Product Data using Keywords to Gather Market Intelligence. Implemented postal code processing and utilized Scrapy for contacts.",
     tech: ["Next.js", "Supabase", "PostgreSQL", "FastAPI", "Scrapy", "Pandas", "Selenium", "BeautifulSoup", "Python"],
-    github: "https://github.com", // Replace with actual GitHub link if available
-    demo: "Link", // As per resume, which might not be a direct URL. If you have a specific URL for the demo, replace this.
+    github: "https://github.com/Abdul-logiclion", // Replace with actual GitHub link if available
+    demo: "https://global-market-intelligence-szxu.vercel.app/", // As per resume, which might not be a direct URL. If you have a specific URL for the demo, replace this.
     image: "/scraper.png?height=200&width=400&text=AI+Product+Scraper",
   },
 ];
 
 const experience = [
   {
-    title: "MERN Stack Developer",
-    company: "Fiverr",
-    period: "Jul 24 - Dec '24",
-    description:
-      "Developed MERN web application for centralized Jira/Salesforce data and in-browser PDF reporting. Built React-based reports and Jira plugins (incl. custom fields) to enhance data integration.",
-  },
+  "title": "MERN Stack Developer",
+  "company": "India (Remote)",
+  "period": "July 2024 - December 2024",
+  "description": [
+    "Consolidated data from three platforms (Jira, ServiceNow, and Salesforce) into a MERN stack application, which improved data accessibility and reporting efficiency.",
+    "Built over five custom React-based reports for in-browser PDF generation, streamlining the data-sharing process for key stakeholders.",
+    "Created three custom Jira plugins, extending Jira’s default functionality and reducing manual data retrieval time by an estimated 20%."
+  ]
+},
   {
     title: "Front end Intern",
     company: "National Incubation Center",
@@ -340,9 +343,9 @@ const achievements = [
                       </Link>
                     </Button>
                     <Button variant="outline" size="sm" asChild>
-                      <Link href={project.demo}>
-                        <ExternalLink className="w-4 h-4 mr-1" />
-                        Demo
+                      <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                     <ExternalLink className="w-4 h-4 mr-1" />
+                        Try it here
                       </Link>
                     </Button>
                   </div>
